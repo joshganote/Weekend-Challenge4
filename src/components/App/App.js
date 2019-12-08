@@ -8,14 +8,14 @@ class App extends Component {
 
   state = {
     galleryItem: [
-      // {image: 'images/mid.png', alt:'TheMidnightBand'},
-      // {image: 'images/squad.png', alt:'Friends'},
-      // {image: 'images/fam.png', alt:'Family'},
-      // {image: 'images/guitar.png', alt:'Guitar'},
-      // {image: 'images/momz.png', alt:'Mom'},
-      // {image: 'images/studio.png', alt:'Studio'},
-      // {image: 'images/work.png', alt:'Work'},
-      // {image: 'images/RR.2.png', alt:'Randy_Rhoads'},
+      {image: 'images/mid.png', alt:'TheMidnightBand'},
+      {image: 'images/squad.png', alt:'Friends'},
+      {image: 'images/fam.png', alt:'Family'},
+      {image: 'images/guitar.png', alt:'Guitar'},
+      {image: 'images/momz.png', alt:'Mom'},
+      {image: 'images/studio.png', alt:'Studio'},
+      {image: 'images/work.png', alt:'Work'},
+      {image: 'images/RR.2.png', alt:'Randy_Rhoads'},
     ],
   };
 
@@ -39,6 +39,7 @@ class App extends Component {
     })
   }
 
+  // Am I using the correct data?
   imageLike = (galleryId, id) => {
     axios({
       method: 'PUT',
