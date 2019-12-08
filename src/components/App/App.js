@@ -4,6 +4,7 @@ import axios from 'axios';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 class App extends Component {
+
   state = {
     galleryItem: [
       {image: 'images/mid.png', alt:'TheMidnightBand'},
@@ -48,6 +49,7 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
+        
         <GalleryItem galleryItem={this.state.galleryItem} />
 
       </div>
