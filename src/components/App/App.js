@@ -39,8 +39,22 @@ class App extends Component {
     })
   }
 
-
-
+  imageLike = (galleryId, id) => {
+    axios({
+      method: 'PUT',
+      url: '/like/' + id,
+      data: {
+        galleryId: galleryId
+      }
+    })
+    .then((response) => {
+      console.log('like', response);
+      this.getImage();
+    })
+    .then((err) => {
+      console.log('no like', err);
+    })
+  }
 
   render() {
     return (
@@ -51,8 +65,8 @@ class App extends Component {
         <br />
         <p>Gallery goes here</p>
 
-        <GalleryItem galleryItem={this.state.galleryItem} />
-        
+        <GalleryItem galleryItem={this.state.galleryItem} imageLike={this.imageLike} />
+
       </div>
     );
   }

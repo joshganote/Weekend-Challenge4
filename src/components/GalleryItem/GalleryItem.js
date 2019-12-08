@@ -7,7 +7,8 @@ class GalleryItem extends Component {
         const htmlArray = this.props.galleryItem.map((item, index) => {
             return (
 
-                <GalleryListItem key={index} image={item} />
+                <GalleryListItem key={index} image={item} 
+                imageLike={this.props.imageLike} />
             )
         })
         return (

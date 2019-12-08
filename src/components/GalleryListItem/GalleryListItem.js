@@ -7,8 +7,11 @@ class GalleryListItem extends Component {
             <div>
                 <img
                 style={{width: 200, height: 200}}
-                src={this.props.image}
+                src={this.props.galleryItem}
+                alt={''}
                 />
+                <br></br>
+                <button onClick={() => this.props.imageLike(this.props.galleryItem.id)}>Like</button>
             </div>
         )
     }
