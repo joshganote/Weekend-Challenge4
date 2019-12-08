@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './GalleryListItem.css';
 
 class GalleryListItem extends Component {
     render() {
@@ -11,7 +12,7 @@ class GalleryListItem extends Component {
                 alt={''}
                 />
                 <br></br>
-                <button onClick={() => this.props.imageLike(this.props.galleryItem.id)}>Like</button>
+                <button className="clickable" onClick={() => this.props.imageLike(this.props.galleryItem.id)}>Like</button>
             </div>
         )
     }

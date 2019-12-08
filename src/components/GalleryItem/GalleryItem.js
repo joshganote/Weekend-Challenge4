@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './GalleryItem.css';
 import GalleryListItem from '../GalleryListItem/GalleryListItem';
 
 class GalleryItem extends Component {
@@ -12,7 +13,7 @@ class GalleryItem extends Component {
             )
         })
         return (
-            <div>
+            <div className="imgLayout">
                 {htmlArray}
             </div>
         )
