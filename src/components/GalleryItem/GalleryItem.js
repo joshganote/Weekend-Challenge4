@@ -3,13 +3,14 @@ import GalleryListItem from '../GalleryListItem/GalleryListItem';
 
 class GalleryItem extends Component {
 
-    render(){
+    render() {
         const htmlArray = this.props.galleryItem.map((item, index) => {
             return (
+
                 <GalleryListItem key={index} image={item} />
             )
         })
-        return(
+        return (
             <div>
                 {htmlArray}
             </div>

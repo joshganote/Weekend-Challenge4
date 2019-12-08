@@ -7,7 +7,7 @@ class GalleryListItem extends Component {
             <div>
                 <img
                 style={{width: 200, height: 200}}
-                src={this.props.image} 
+                src={this.props.image}
                 />
             </div>
         )

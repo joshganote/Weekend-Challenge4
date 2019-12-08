@@ -3,18 +3,19 @@ import './App.css';
 import axios from 'axios';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
+
 class App extends Component {
 
   state = {
     galleryItem: [
-      {image: 'images/mid.png', alt:'TheMidnightBand'},
-      {image: 'images/squad.png', alt:'Friends'},
-      {image: 'images/fam.png', alt:'Family'},
-      {image: 'images/guitar.png', alt:'Guitar'},
-      {image: 'images/momz.png', alt:'Mom'},
-      {image: 'images/studio.png', alt:'Studio'},
-      {image: 'images/work.png', alt:'Work'},
-      {image: 'images/RR.2.png', alt:'Randy_Rhoads'},
+      // {image: 'images/mid.png', alt:'TheMidnightBand'},
+      // {image: 'images/squad.png', alt:'Friends'},
+      // {image: 'images/fam.png', alt:'Family'},
+      // {image: 'images/guitar.png', alt:'Guitar'},
+      // {image: 'images/momz.png', alt:'Mom'},
+      // {image: 'images/studio.png', alt:'Studio'},
+      // {image: 'images/work.png', alt:'Work'},
+      // {image: 'images/RR.2.png', alt:'Randy_Rhoads'},
     ],
   };
 
@@ -49,9 +50,9 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-        
-        <GalleryItem galleryItem={this.state.galleryItem} />
 
+        <GalleryItem galleryItem={this.state.galleryItem} />
+        
       </div>
     );
   }
