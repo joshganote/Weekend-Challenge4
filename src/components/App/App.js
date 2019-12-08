@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import GalleryList from '../GalleryList/GalleryList';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 class App extends Component {
   state = {
-    galleryItem: [],
+    galleryItem: [
+      {image: 'images/mid.png', alt:'TheMidnightBand'},
+      {image: 'images/squad.png', alt:'Friends'},
+      {image: 'images/fam.png', alt:'Family'},
+      {image: 'images/guitar.png', alt:'Guitar'},
+      {image: 'images/momz.png', alt:'Mom'},
+      {image: 'images/studio.png', alt:'Studio'},
+      {image: 'images/work.png', alt:'Work'},
+      {image: 'images/RR.2.png', alt:'Randy_Rhoads'},
+    ],
   };
 
   componentDidMount() {
@@ -39,17 +48,7 @@ class App extends Component {
         </header>
         <br />
         <p>Gallery goes here</p>
-
-        <img src="images/mid.png" alt="TheMidnightBand" />
-        <img src="images/squad.png" alt="Friends" />
-        <img src="images/fam.png" alt="Family" /><br></br>
-        <img src="images/guitar.png" alt="Guitar" />
-        <img src="images/momz.png" alt="Mom" />
-        <img src="images/studio.png" alt="Studio" /><br></br>
-        <img src="images/work.png" alt="Work" />
-        <img src="images/album.png" alt="Album" />
-        <img src="images/RR.2.png" alt="Randy Rhoads" />
-        {/* <GalleryList galleryList={this.state.galleryList} /> */}
+        <GalleryItem galleryItem={this.state.galleryItem} />
 
       </div>
     );
