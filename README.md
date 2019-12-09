@@ -7,7 +7,7 @@ In order to make a more effective code base, I will utilize the ability to creat
 Things I will need for this project are:
 
 * create React app
-    -Dependencies-
+    *Dependencies
         - axios
         - react
         - react-dom
