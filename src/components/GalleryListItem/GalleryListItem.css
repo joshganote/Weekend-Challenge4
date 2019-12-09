@@ -2,4 +2,12 @@
     cursor: pointer;
 }
 
+.showing {
+    height: auto;
+}
+
+.notShowing {
+    height: 0;
+    overflow: hidden;
+}
 

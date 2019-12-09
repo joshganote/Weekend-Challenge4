@@ -7,16 +7,7 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 class App extends Component {
 
   state = {
-    galleryItem: [
-      {image: 'images/mid.png', alt:'TheMidnightBand'},
-      {image: 'images/squad.png', alt:'Friends'},
-      {image: 'images/fam.png', alt:'Family'},
-      {image: 'images/guitar.png', alt:'Guitar'},
-      {image: 'images/momz.png', alt:'Mom'},
-      {image: 'images/studio.png', alt:'Studio'},
-      {image: 'images/work.png', alt:'Work'},
-      {image: 'images/RR.2.png', alt:'Randy_Rhoads'},
-    ],
+    galleryItem: [],
   };
 
   componentDidMount() {
@@ -25,7 +16,7 @@ class App extends Component {
   getImage = () => {
     axios({
       method: 'GET',
-      url: '/gallery',
+      url: '/gallery/',
     })
     .then((response) => {
       this.setState({
@@ -39,17 +30,14 @@ class App extends Component {
     })
   }
 
-  // Am I using the correct data?
-  imageLike = (galleryId, id) => {
+  // Am I using
+  imageLike = (id) => {
     axios({
       method: 'PUT',
-      url: '/like/' + id,
-      data: {
-        galleryId: galleryId
-      }
+      url: '/gallery/like/' + id,
     })
     .then((response) => {
-      console.log('like', response);
+      console.log('like');
       this.getImage();
     })
     .then((err) => {

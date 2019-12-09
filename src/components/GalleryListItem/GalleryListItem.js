@@ -2,28 +2,31 @@ import React, { Component } from 'react';
 import './GalleryListItem.css';
 
 class GalleryListItem extends Component {
-    // constructor(props) {
-    //     super(props);
 
-    //     this.handleImageDescription = this.handleImageDescription.bind(this);
-    //     this.handleImageNoDescription = this.handleImageNoDescription.bind(this);
-    //     this.state = {showDescription: false};
-    // }
+    constructor(props) {
+        super(props);
 
-    // handleImageDescription() {
-    //     this.setState({
-    //         showDescription: true
-    //     });
-    // }
+        this.state = {
+            show: false,
+        }
+    }
 
-    // handleImageNoDescription() {
-    //     this.setState({
-    //         showDescription: false
-    //     });
-    // }
-    
-    
+    clickImage = (event) => {
+        this.setState({
+            show: !this.state.show,
+        })
+    }
+
     render() {
+        let showImage;
+        let showDescription
+        if (this.state.show) {
+            showImage = 'showing';
+            showDescription = 'showing'
+        } else if (!this.state.show) {
+            showImage = 'notShowing';
+            showDescription = 'notShowing'
+        }
         // const showDescription = this.state.showDescription;
 
         // if (showDescription) {
@@ -34,17 +37,25 @@ class GalleryListItem extends Component {
 
         return (
             <div>
-                <img
-                style={{width: 200, height: 200}}
-                src={this.props.image.galleryItem}
-                alt={''}
-                />
+                <div >
+                    <button onClick={this.clickImage}>Description
+                    <div className={showDescription}>
+                        <p>{this.props.image.description}</p>
+                    </div>
+                    </button>
+                    <img 
+                        style={{ width: 200, height: 200 }}
+                        src={'images/' + this.props.image.path}
+                        alt={''}
+                    />
+                </div>
                 <br></br>
                 <div>
-                <button className="clickable" onClick={() => this.props.imageLike(this.props.image.id)}>Like</button>
-                <br></br>
+                    <button className="clickable" 
+                    onClick={() => this.props.imageLike(this.props.image.likes)}>Like
+                    </button>
                     <ul>
-                        <p>Any help with conditional render for img click and likes?</p>
+                
                     </ul>
                 </div>
             </div>
@@ -53,4 +64,3 @@ class GalleryListItem extends Component {
 }
 
 export default GalleryListItem;
-            
