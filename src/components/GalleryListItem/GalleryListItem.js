@@ -54,8 +54,9 @@ class GalleryListItem extends Component {
                     <button className="clickable" 
                     onClick={() => this.props.imageLike(this.props.image.likes)}>Like
                     </button>
+                    {/* not sure what I'm doing at this point */}
                     <ul>
-                
+                        <p>{this.props.image.likes} Many People Liked Your Image!</p>
                     </ul>
                 </div>
             </div>
