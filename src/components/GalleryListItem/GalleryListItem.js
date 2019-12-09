@@ -38,7 +38,7 @@ class GalleryListItem extends Component {
         return (
             <div>
                 <div >
-                    <button onClick={this.clickImage}>Click for Description
+                    <button className="clickable" onClick={this.clickImage}>Click for Description
                     <div className={showDescription}>
                         <p>{this.props.image.description}</p>
                     </div>
