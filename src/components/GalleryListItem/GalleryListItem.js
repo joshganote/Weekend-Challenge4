@@ -38,16 +38,17 @@ class GalleryListItem extends Component {
         return (
             <div>
                 <div >
-                    <button onClick={this.clickImage}>Description
+                    <button onClick={this.clickImage}>Click for Description
                     <div className={showDescription}>
-                            <p>{this.props.image.description}</p>
-                        </div>
+                        <p>{this.props.image.description}</p>
+                    </div>
+                        <img onClick={this.clickImage}
+                            style={{ width: 200, height: 200 }}
+                            src={'images/' + this.props.image.path}
+                            description={this.props.image.description}
+                            alt={''}
+                        />
                     </button>
-                    <img
-                        style={{ width: 200, height: 200 }}
-                        src={'images/' + this.props.image.path}
-                        alt={''}
-                    />
                 </div>
                 <br></br>
                 <div>
