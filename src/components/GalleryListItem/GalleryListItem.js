@@ -40,10 +40,10 @@ class GalleryListItem extends Component {
                 <div >
                     <button onClick={this.clickImage}>Description
                     <div className={showDescription}>
-                        <p>{this.props.image.description}</p>
-                    </div>
+                            <p>{this.props.image.description}</p>
+                        </div>
                     </button>
-                    <img 
+                    <img
                         style={{ width: 200, height: 200 }}
                         src={'images/' + this.props.image.path}
                         alt={''}
@@ -51,12 +51,12 @@ class GalleryListItem extends Component {
                 </div>
                 <br></br>
                 <div>
-                    <button className="clickable" 
-                    onClick={() => this.props.imageLike(this.props.image.likes)}>Like
+                    <button className="clickable"
+                        onClick={() => this.props.imageLike(this.props.image.likes)}>Like
                     </button>
                     {/* not sure what I'm doing at this point */}
                     <ul>
-                        <p>{this.props.image.likes} Many People Liked Your Image!</p>
+                        <p>{this.props.image.likes} People Liked Your Image!</p>
                     </ul>
                 </div>
             </div>
