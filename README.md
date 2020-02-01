@@ -6,17 +6,7 @@ In order to make a more effective code base, I will utilize the ability to creat
 
 Things I will need for this project are:
 
-<<<<<<< HEAD
 ## Setup
-=======
-* create React app
-    -Dependencies
-        - axios
-        - react
-        - react-dom
-        - react-scripts
-        - nodemon
->>>>>>> c226b09a8ccb00e1b29c7aa8e0a01c0cfde7ee07
 
 npm install
 npm run server
@@ -32,7 +22,6 @@ npm run client
 
 ## Built With
 
-<<<<<<< HEAD
 - React
 - HTML
 - CSS
@@ -49,6 +38,3 @@ Thanks to Prime Digital Academy in Kansas City who equipped and helped me to mak
 ## Support
 
 if you would to give your own feedback to me, please email me at j.ganote0825@gmail.com
-=======
-Overall this project gave me insight on how to break up chucks of code into smaller component files in React. Although my project was relatively small, I can see where this would allow larger websites the ability to continuously add more products and users into their database and then display them in a repeatable structure.
->>>>>>> c226b09a8ccb00e1b29c7aa8e0a01c0cfde7ee07
