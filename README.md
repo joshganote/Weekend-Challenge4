@@ -6,26 +6,35 @@ In order to make a more effective code base, I will utilize the ability to creat
 
 Things I will need for this project are:
 
-* create React app
-    -Dependencies-
-        - axios
-        - react
-        - react-dom
-        - react-scripts
-        - nodemon
+## Setup
 
-* Node Modules
-* Server 
-* GET/PUT router call
-* JavaSCript
-* CSS
-* Images
-* Multiple Components
+npm install
+npm run server
+npm run client
 
-## Description
+## Usage 
 
-To begin I used axios to retrieve the data (id, title, description, number of likes), and stored it in the main App. I then created a component I could pass that information to. This helps clear up space on my App. Once in the Gallery Item component I can create my array that loops through my data, and gives me access to each unique property. In that component I added some css to create a grid structure for the images similar to one you would see on Instagram. I then imported that component to my App to keep the lines of communication open. Next I created a GalleryListItem that my user functionality lives on. In this component I created a function to control the click function for the image description. Next I needed to use conditional rendering to add toggle capability where the user can click for the description and then hide it if clicked again. Here is where I used props to pass along the image and description from the array in the previous component. 
+1. Feel free to add you images into the public/images folder
+2. In the server/modules/data.js file and write an id, title, description, and path for your image.
+3. Image will display on screen in a grid form 
+4. you can click each image to toggle between showing the description of the image
+5. Click the "like" button to increase the amount of likes by 1 each time.
 
-After that I jumped back into my App to create a function to handle an update to the page every time the like button was clicked. Using axios again, I called to the server to access my router where a conditional statement incremented each like by one. Now I can pass that to each component where each image can have access to it. In my Gallery List Item component I created a button to trigger that function. I also added css to turn the cursor into a pointer letting the user know what they could and couldn't click on, and handle the the toggle properties of the description. 
+## Built With
 
-Overall this project gave me insight on how to break up chucks of code into smaller component files in React. Although my project was relatively small, I can see where this would allow larger websites the ability to continuously add more products and users into their database and then display them in a repeatable structure.
+- React
+- HTML
+- CSS
+- JavaScript
+- Node modules
+- Postgres
+- Postico
+- Postman
+
+## Acknowledgement
+
+Thanks to Prime Digital Academy in Kansas City who equipped and helped me to make this application a reality.
+
+## Support
+
+if you would to give your own feedback to me, please email me at j.ganote0825@gmail.com
