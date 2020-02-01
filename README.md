@@ -8,9 +8,9 @@ Things I will need for this project are:
 
 ## Setup
 
-npm install
-npm run server
-npm run client
+- npm install
+- npm run server
+- npm run client
 
 ## Usage 
 
